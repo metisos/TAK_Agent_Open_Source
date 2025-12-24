@@ -1,0 +1,40 @@
+# TAK AI Agent Configuration Example
+# Copy this file to your-agent.yaml and fill in your values
+
+agent:
+  callsign: "OVERWATCH"
+  uid: "OVERWATCH-001"
+  team: "Cyan"
+  role: "HQ"
+  position:
+    lat: 0.0
+    lon: 0.0
+  stale_minutes: 10
+  position_report_interval: 60
+
+tak_server:
+  host: "your-tak-server.com"
+  port: 8089
+  protocol: "ssl"
+  cert_file: "/app/certs/YOUR_CERT.pem"
+  key_file: "/app/certs/YOUR_CERT.key"
+  ca_file: "/app/certs/ca.pem"
+
+chat:
+  respond_to_all: true
+
+llm:
+  provider: "claude"
+  model: "claude-sonnet-4-20250514"
+  temperature: 0.3
+  max_tokens: 1024
+
+personality:
+  template: "tactical"
+  custom_instructions: |
+    You are OVERWATCH, the team's AI support agent.
+    Keep responses concise and tactical.
+
+logging:
+  level: "INFO"
+  file: "/app/logs/agent.log"

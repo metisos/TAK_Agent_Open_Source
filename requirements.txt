@@ -1,0 +1,9 @@
+pytak>=6.2.0
+aiohttp>=3.9.0
+anthropic>=0.40.0
+groq>=0.4.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+geopy>=2.4.0
+cryptography>=41.0.0
+xmltodict>=0.13.0

@@ -1,0 +1,18 @@
+include LICENSE
+include README.md
+include requirements.txt
+include .env.example
+recursive-include templates *.txt
+recursive-include tak_agent/templates *.txt
+
+# Exclude sensitive files
+exclude .env
+exclude *.pem
+exclude *.key
+exclude *.p12
+recursive-exclude certs *
+recursive-exclude agents *
+recursive-exclude logs *
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store

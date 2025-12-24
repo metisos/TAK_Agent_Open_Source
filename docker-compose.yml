@@ -1,0 +1,24 @@
+services:
+  geoint:
+    build: .
+    container_name: tak-agent-geoint
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./agents/geoint.yaml:/app/config.yaml:ro
+      - ./certs:/app/certs:ro
+      - ./templates:/app/templates:ro
+      - ./logs:/app/logs
+    networks:
+      - tak-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  tak-network:
+    external: true
+    name: takserver-docker-56-release-6_tak-network
