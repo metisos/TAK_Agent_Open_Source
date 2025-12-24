@@ -1,5 +1,7 @@
 # TAK AI Agent Framework
 
+![TAK AI Agent](images/TAK_Logo.jpg)
+
 A modular, configurable AI agent framework for TAK (Team Awareness Kit) networks. Agents connect as full team members with proper credentials and can interact via chat, place markers, create routes, and provide tactical support.
 
 ## Overview
